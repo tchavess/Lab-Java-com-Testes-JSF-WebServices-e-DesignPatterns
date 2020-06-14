@@ -9,7 +9,7 @@ public class CandlestickFactory {
 
 			List<Negociacao> negociacoes) {
 		double maximo = 0;
-		double minimo = negociacoes.isEmpty()? 0 : Double.MAX_VALUE;
+		double minimo = negociacoes.isEmpty() ? 0 : Double.MAX_VALUE;
 		double volume = 0;
 
 		for (Negociacao negociacao : negociacoes) {

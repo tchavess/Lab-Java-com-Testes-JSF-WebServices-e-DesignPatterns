@@ -2,6 +2,9 @@ package br.com.caelum.argentum.modelo;
 
 import java.util.Calendar;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("negociacao")
 public final class Negociacao {
 	private final double preco;
 	private final int quantidade;

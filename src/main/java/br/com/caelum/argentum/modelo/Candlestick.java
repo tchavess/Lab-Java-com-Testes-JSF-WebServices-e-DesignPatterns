@@ -14,6 +14,9 @@ public final class Candlestick {
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
 	public Candlestick(double abertura, double fechamento, double minimo, double maximo, double volume, Calendar data) {
+		if(minimo > maximo) {
+			throw new IllegalArgumentException("Preco Maximo nao pode ser menor do que o preco Minimo");
+		}
 		this.abertura = abertura;
 		this.fechamento = fechamento;
 		this.minimo = minimo;
@@ -47,7 +50,7 @@ public final class Candlestick {
 	}
 	
 	public boolean isAlta() {
-		return this.abertura < this.fechamento;
+		return (this.abertura < this.fechamento) || (this.abertura == this.fechamento);
 	}
 	public boolean isBaixa() {
 		return this.abertura > this.fechamento;

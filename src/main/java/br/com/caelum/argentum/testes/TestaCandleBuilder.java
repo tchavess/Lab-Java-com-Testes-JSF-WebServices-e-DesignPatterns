@@ -17,6 +17,7 @@ public class TestaCandleBuilder {
 				.comVolume(145234.20).comData(hoje).geraCandle();
 		
 		System.out.println(candle);
+		System.out.println(hoje);
 	}
 
 }
